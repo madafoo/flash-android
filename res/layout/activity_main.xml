@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.ancode.flashandroid.MainActivity" >
+
+    <EditText
+        android:id="@+id/serverAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:ems="10"
+        android:hint="FlashServer ip address" />
+    
+    <EditText
+        android:id="@+id/serverPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/serverAddress"
+        android:layout_toEndOf="@+id/serverAddress"
+        android:text="8080"
+        android:hint="port" />
+    
+    <Button
+        android:id="@+id/btnPublish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/serverAddress"
+        android:text="Publish" />
+
+    <EditText
+        android:id="@+id/pubMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/serverAddress"
+        android:layout_toLeftOf="@+id/btnPublish"
+        android:ems="10"
+        android:hint="Please input message"
+        android:inputType="textMultiLine" />    
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnPublish"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Subscribe Part"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnSubscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:text="Subscribe" />
+
+    <ListView
+        android:id="@+id/listMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSubscribe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" >
+    </ListView>
+
+
+
+</RelativeLayout>
